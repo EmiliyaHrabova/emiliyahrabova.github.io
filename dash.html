@@ -1,8 +1,17 @@
 
 <?php
+error_reporting(E_ALL | E_STRICT);
+
 session_start();
-if(!empty($_SESSION["loggedIn"])){
+
+if(!empty($_SESSION['loggedIn'])) {
+
 ?>
+
+<!DOCTYPE HTML>  
+<html>
+
+<body>
 
 <a href="index.html" title="Home">HOME from logged</a>
 
@@ -30,13 +39,27 @@ if(!empty($_SESSION["loggedIn"])){
 </div>
 <script type='text/javascript'>                    var divElement = document.getElementById('viz1605725927785');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='850px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='850px';} else { vizElement.style.width='100%';vizElement.style.height='2450px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
 
+</body>
+</html>
+
 <?php
-	}
-	else {
+    }
+    else { 
 ?>
 
-<a href="index.html" title="Home">Not logged GO HOME</a>
+<!DOCTYPE HTML>  
+<html>
+<head>
+</head>
+<body>
+
+<h1 align = "center">Unfortunately, you will need to be logged in to view this section!<h1>
+<a href="index.html" title="Home">HOME from logged</a>
+
+</body>
+</html>
 <?php
-	}
-	session_destroy();
+    }
+    session_destroy();
+
 ?>
