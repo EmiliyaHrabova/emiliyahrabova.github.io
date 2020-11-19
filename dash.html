@@ -1,10 +1,10 @@
 
-<a href="index.html" title="Home">HOME</a>
-
 <?php
 session_start();
 if(!empty($_SESSION["loggedIn"])){
 ?>
+
+<a href="index.html" title="Home">HOME from logged</a>
 
 <div class='tableauPlaceholder' id='viz1605725927785' style='position: relative'>
 <noscript>
@@ -35,7 +35,7 @@ if(!empty($_SESSION["loggedIn"])){
 	else {
 ?>
 
-<a href="index.html" title="Home">GO HOME</a>
+<a href="index.html" title="Home">Not logged GO HOME</a>
 <?php
 	}
 	session_destroy();
