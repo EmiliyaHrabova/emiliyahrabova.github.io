@@ -1,12 +1,4 @@
 
-<?php
-error_reporting(E_ALL | E_STRICT);
-
-session_start();
-
-if(!empty($_SESSION['loggedIn'])) {
-
-?>
 
 <!DOCTYPE HTML>  
 <html>
@@ -41,25 +33,3 @@ if(!empty($_SESSION['loggedIn'])) {
 
 </body>
 </html>
-
-<?php
-    }
-    else { 
-?>
-
-<!DOCTYPE HTML>  
-<html>
-<head>
-</head>
-<body>
-
-<h1 align = "center">Unfortunately, you will need to be logged in to view this section!<h1>
-<a href="index.html" title="Home">HOME from logged</a>
-
-</body>
-</html>
-<?php
-    }
-    session_destroy();
-
-?>
